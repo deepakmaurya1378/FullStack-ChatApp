@@ -1,19 +1,23 @@
-import { FaArrowLeft } from 'react-icons/fa'; // Import the back arrow icon from FontAwesome
+import { FaArrowLeft } from 'react-icons/fa'; // Import the icons from FontAwesome
+import { useNavigate } from 'react-router-dom'; // For navigation
 
 const BackButton = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
   const handleBack = () => {
-    // Implement your back functionality, for example:
-    window.history.back(); // Go back to the previous page
+    navigate('/'); // Go back to the previous page
   };
 
   return (
-    <button
-      onClick={handleBack}
-      className="p-2 bg-base-300  rounded-full  flex items-center"
-    >
-      <FaArrowLeft size={24} />
-      <span className="ml-2">Back</span>
-    </button>
+    <div className="flex space-x-2">
+      <button
+        onClick={handleBack}
+        className="p-2 bg-base-300 rounded-full flex items-center"
+      >
+        <FaArrowLeft size={24} />
+        <span className="ml-2">Back</span>
+      </button>
+    </div>
   );
 };
 
