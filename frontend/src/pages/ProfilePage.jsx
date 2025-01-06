@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Camera, Mail, User } from "lucide-react";
-
+import BackButton from "../components/Backbutton";
 
 const ProfilePage = () => {
   const { authUser, isUpdatingProfile, updateProfile } = useAuthStore();
